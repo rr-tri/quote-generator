@@ -20,7 +20,7 @@ const QuoteBox = ({ quote, author, fetchRandomQuote, textColor, buttonColor }) =
         </span>
       </div>
 
-      <Buttons fetchRandomQuote={fetchRandomQuote} buttonColor={buttonColor}/>
+      <Buttons quote={quote} fetchRandomQuote={fetchRandomQuote} buttonColor={buttonColor}/>
     </div>
   );
 };

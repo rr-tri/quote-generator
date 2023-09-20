@@ -1,6 +1,6 @@
 import React from "react";
 
-const Buttons = ({ fetchRandomQuote,buttonColor }) => {
+const Buttons = ({ quote, fetchRandomQuote,buttonColor }) => {
   return (
     <div className="button-container">
       
@@ -8,7 +8,11 @@ const Buttons = ({ fetchRandomQuote,buttonColor }) => {
           id="tweet-quote"
           className="button"
           target="_blank"
-          href={`twitter.com/intent/tweet`}
+          href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
+            window.location.href
+          )}&text=${encodeURIComponent(
+            quote
+          )}`}
           rel="noreferrer"
           style={{backgroundColor:buttonColor}}
         >
@@ -19,7 +23,7 @@ const Buttons = ({ fetchRandomQuote,buttonColor }) => {
           id="tumblr-quote"
           className="button"
           target="_blank"
-          href={`https://twitter.com/`}
+          href={`https://www.tumblr.com/share/link?url=${encodeURIComponent(window.location.href)}&name=${encodeURIComponent(quote)}&description="Check out this amazing blog post I found!"`}
           rel="noreferrer"
           style={{backgroundColor:buttonColor}}
         >

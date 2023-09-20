@@ -36,7 +36,7 @@ class App extends Component {
     try {
       const newThemeColor = getRandomColor(colors);
       const response = await axios.get("https://api.quotable.io/random");
-      // console.log("response", response);
+      console.log("response", response);
       const { content, author } = response.data;
       this.setState({
         quote: content,
